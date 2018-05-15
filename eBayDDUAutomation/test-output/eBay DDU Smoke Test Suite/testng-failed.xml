@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [eBay DDU Smoke Test Suite]">
+  <test thread-count="5" name="SellerManagerSignUP Test(failed)">
+    <classes>
+      <class name="com.eBayDDU.SmokeTest.FirstTime_SignIn_Test">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="setup"/>
+          <include name="TestSignUp"/>
+        </methods>
+      </class> <!-- com.eBayDDU.SmokeTest.FirstTime_SignIn_Test -->
+    </classes>
+  </test> <!-- SellerManagerSignUP Test(failed) -->
+</suite> <!-- Failed suite [eBay DDU Smoke Test Suite] -->

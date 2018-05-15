@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="eBay DDU Smoke Test Suite" verbose="1" parallel="none">
+
+	<test name="eBaySellerSignUP Test">
+		<classes>
+			<class name="com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test"/>  
+		</classes>
+	</test>
+	
+ 	<test name="Registration Test">
+		<classes>
+			<class name="com.eBayDDU.SmokeTest.Registration_Test"/>  
+		</classes>
+	</test>
+
+	<test name="SellerManagerSignUP Test">
+		<classes>
+			<class name="com.eBayDDU.SmokeTest.FirstTime_SignIn_Test"/>  
+		</classes>
+	</test>
+</suite>
