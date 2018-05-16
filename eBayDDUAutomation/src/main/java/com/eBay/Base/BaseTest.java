@@ -32,7 +32,8 @@ public class BaseTest {
 	
 	@BeforeTest
 	public static void setup(final ITestContext testContext){
-		System.setProperty("webdriver.chrome.driver",BaseTest.class.getResource("/drivers/chromedriver.exe").toString());
+		
+		System.setProperty("webdriver.chrome.driver",BaseTest.class.getResource("/drivers/chromedriver.exe").getFile());
 		
 		driver=new ChromeDriver();		
 		if(testContext.getName().contains("eBaySellerSignUP")){
