@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [eBay DDU Smoke Test Suite]">
+  <test thread-count="5" name="eBaySellerSignUP Test(failed)">
     <classes>
-      <class name="com.eBayDDU.SmokeTest.OrderPurchaseAutomation">
+      <class name="com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test">
         <methods>
           <include name="quitDriver"/>
-          <include name="eBayOrderAutomation"/>
+          <include name="eBaySellerSignUP"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.eBayDDU.SmokeTest.OrderPurchaseAutomation -->
+      </class> <!-- com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- eBaySellerSignUP Test(failed) -->
+  <test thread-count="5" name="Registration Test(failed)">
+    <classes>
+      <class name="com.eBayDDU.SmokeTest.Registration_Test">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="Registration"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.eBayDDU.SmokeTest.Registration_Test -->
+    </classes>
+  </test> <!-- Registration Test(failed) -->
+  <test thread-count="5" name="SellerManagerSignUP Test(failed)">
+    <classes>
+      <class name="com.eBayDDU.SmokeTest.FirstTime_SignIn_Test">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="setup"/>
+          <include name="TestSignUp"/>
+        </methods>
+      </class> <!-- com.eBayDDU.SmokeTest.FirstTime_SignIn_Test -->
+    </classes>
+  </test> <!-- SellerManagerSignUP Test(failed) -->
+</suite> <!-- Failed suite [eBay DDU Smoke Test Suite] -->

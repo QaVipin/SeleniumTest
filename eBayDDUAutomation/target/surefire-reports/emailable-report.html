@@ -9,10 +9,29 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">eBay DDU Smoke Test Suite</th></tr>
-<tr><td><a href="#t0">Registration Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">9,561</td><td></td><td></td></tr>
+<tr><td><a href="#t0">eBaySellerSignUP Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">45,177</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Registration Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,728</td><td></td><td></td></tr>
+<tr><td><a href="#t2">SellerManagerSignUP Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,461</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num attn">3</th><th class="num">128,366</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">eBay DDU Smoke Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Registration Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.eBayDDU.SmokeTest.Registration_Test</td><td><a href="#m0">Registration</a></td><td rowspan="1">1525687119676</td><td rowspan="1">3457</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">eBay DDU Smoke Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">eBaySellerSignUP Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test</td><td><a href="#m0">eBaySellerSignUP</a></td><td rowspan="1">1526455565697</td><td rowspan="1">40398</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Registration Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.eBayDDU.SmokeTest.Registration_Test</td><td><a href="#m1">Registration</a></td><td rowspan="1">1526455607755</td><td rowspan="1">40106</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">SellerManagerSignUP Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.eBayDDU.SmokeTest.FirstTime_SignIn_Test</td><td><a href="#m2">TestSignUp</a></td><td rowspan="1">1526455649289</td><td rowspan="1">40050</td></tr></tbody>
 </table>
-<h2>Registration Test</h2><h3 id="m0">com.eBayDDU.SmokeTest.Registration_Test#Registration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>eBaySellerSignUP Test</h2><h3 id="m0">com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test#eBaySellerSignUP</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Not able to find the element in Time
+	at com.eBay.Base.BasePage.waitForVisibilityOfElement(BasePage.java:35)
+	at com.eBay.Page.EbayDeveloperSignIn.SignInWithDeveloper(EbayDeveloperSignIn.java:53)
+	at com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test.eBaySellerSignUP(Ebay_SellerSignUp_Test.java:16)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Registration Test</h2><h3 id="m1">com.eBayDDU.SmokeTest.Registration_Test#Registration</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Not able to find the element in Time
+	at com.eBay.Base.BasePage.waitForVisibilityOfElement(BasePage.java:35)
+	at com.eBay.Page.SignInPage.&lt;init&gt;(SignInPage.java:18)
+	at com.eBayDDU.SmokeTest.Registration_Test.Registration(Registration_Test.java:14)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SellerManagerSignUP Test</h2><h3 id="m2">com.eBayDDU.SmokeTest.FirstTime_SignIn_Test#TestSignUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Not able to find the element in Time
+	at com.eBay.Base.BasePage.waitForVisibilityOfElement(BasePage.java:35)
+	at com.eBay.Page.SignInPage.&lt;init&gt;(SignInPage.java:18)
+	at com.eBayDDU.SmokeTest.FirstTime_SignIn_Test.TestSignUp(FirstTime_SignIn_Test.java:16)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

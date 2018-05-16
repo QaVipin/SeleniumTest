@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-eBay_DDU_Smoke_Test_Suite">
-              <span class="suite-name border-passed">eBay DDU Smoke Test Suite</span>
+              <span class="suite-name border-failed">eBay DDU Smoke Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-eBay_DDU_Smoke_Test_Suite">
-                    <span>C:\Users\vi016ra\workspace\eBayDDUAutomation\testng.xml</span>
+                    <span>C:\Users\vi016ra\git\eBayDDUAutomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-eBay_DDU_Smoke_Test_Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-eBay_DDU_Smoke_Test_Suite" class="hide-methods passed suite-eBay_DDU_Smoke_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-eBay_DDU_Smoke_Test_Suite -->
-                      <a href="#" panel-name="suite-eBay_DDU_Smoke_Test_Suite" class="show-methods passed suite-eBay_DDU_Smoke_Test_Suite"> (show)</a> <!-- show-methods passed suite-eBay_DDU_Smoke_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-eBay_DDU_Smoke_Test_Suite" class="hide-methods failed suite-eBay_DDU_Smoke_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-eBay_DDU_Smoke_Test_Suite -->
+                      <a href="#" panel-name="suite-eBay_DDU_Smoke_Test_Suite" class="show-methods failed suite-eBay_DDU_Smoke_Test_Suite"> (show)</a> <!-- show-methods failed suite-eBay_DDU_Smoke_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-eBay_DDU_Smoke_Test_Suite">
+                    <div class="method-list-content failed suite-eBay_DDU_Smoke_Test_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-eBay_DDU_Smoke_Test_Suite" title="com.eBayDDU.SmokeTest.Registration_Test" hash-for-method="Registration">Registration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-eBay_DDU_Smoke_Test_Suite -->
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-eBay_DDU_Smoke_Test_Suite" title="com.eBayDDU.SmokeTest.FirstTime_SignIn_Test" hash-for-method="TestSignUp">TestSignUp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-eBay_DDU_Smoke_Test_Suite" title="com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test" hash-for-method="eBaySellerSignUP">eBaySellerSignUP</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-eBay_DDU_Smoke_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +127,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-eBay_DDU_Smoke_Test_Suite" class="panel eBay_DDU_Smoke_Test_Suite">
-          <div class="suite-eBay_DDU_Smoke_Test_Suite-class-passed">
+          <div class="suite-eBay_DDU_Smoke_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.eBayDDU.SmokeTest.Registration_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,25 +138,83 @@
                   <a name="Registration">
                   </a> <!-- Registration -->
                   <span class="method-name">Registration</span>
+                  <div class="stack-trace">java.lang.AssertionError: Not able to find the element in Time
+	at com.eBay.Base.BasePage.waitForVisibilityOfElement(BasePage.java:35)
+	at com.eBay.Page.SignInPage.&lt;init&gt;(SignInPage.java:18)
+	at com.eBayDDU.SmokeTest.Registration_Test.Registration(Registration_Test.java:14)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-eBay_DDU_Smoke_Test_Suite-class-passed -->
+          </div> <!-- suite-eBay_DDU_Smoke_Test_Suite-class-failed -->
+          <div class="suite-eBay_DDU_Smoke_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.eBayDDU.SmokeTest.FirstTime_SignIn_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestSignUp">
+                  </a> <!-- TestSignUp -->
+                  <span class="method-name">TestSignUp</span>
+                  <div class="stack-trace">java.lang.AssertionError: Not able to find the element in Time
+	at com.eBay.Base.BasePage.waitForVisibilityOfElement(BasePage.java:35)
+	at com.eBay.Page.SignInPage.&lt;init&gt;(SignInPage.java:18)
+	at com.eBayDDU.SmokeTest.FirstTime_SignIn_Test.TestSignUp(FirstTime_SignIn_Test.java:16)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-eBay_DDU_Smoke_Test_Suite-class-failed -->
+          <div class="suite-eBay_DDU_Smoke_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="eBaySellerSignUP">
+                  </a> <!-- eBaySellerSignUP -->
+                  <span class="method-name">eBaySellerSignUP</span>
+                  <div class="stack-trace">java.lang.AssertionError: Not able to find the element in Time
+	at com.eBay.Base.BasePage.waitForVisibilityOfElement(BasePage.java:35)
+	at com.eBay.Page.EbayDeveloperSignIn.SignInWithDeveloper(EbayDeveloperSignIn.java:53)
+	at com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test.eBaySellerSignUP(Ebay_SellerSignUp_Test.java:16)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-eBay_DDU_Smoke_Test_Suite-class-failed -->
         </div> <!-- panel eBay_DDU_Smoke_Test_Suite -->
         <div panel-name="test-xml-eBay_DDU_Smoke_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vi016ra\workspace\eBayDDUAutomation\testng.xml</span>
+            <span class="header-content">C:\Users\vi016ra\git\eBayDDUAutomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;eBay DDU Smoke Test Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;eBaySellerSignUP Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- eBaySellerSignUP Test --&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Registration Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.eBayDDU.SmokeTest.Registration_Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Registration Test --&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;SellerManagerSignUP Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.eBayDDU.SmokeTest.FirstTime_SignIn_Test&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SellerManagerSignUP Test --&gt;
 &lt;/suite&gt; &lt;!-- eBay DDU Smoke Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +226,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
+                <span class="test-name">eBaySellerSignUP Test (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name">Registration Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SellerManagerSignUP Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +258,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Registration')
-data.setCell(0, 2, 'com.eBayDDU.SmokeTest.Registration_Test')
-data.setCell(0, 3, 3457);
+data.setCell(0, 1, 'eBaySellerSignUP')
+data.setCell(0, 2, 'com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test')
+data.setCell(0, 3, 40398);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Registration')
+data.setCell(1, 2, 'com.eBayDDU.SmokeTest.Registration_Test')
+data.setCell(1, 3, 40106);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestSignUp')
+data.setCell(2, 2, 'com.eBayDDU.SmokeTest.FirstTime_SignIn_Test')
+data.setCell(2, 3, 40050);
 window.suiteTableData['eBay_DDU_Smoke_Test_Suite']= { tableData: data, tableDiv: 'times-div-eBay_DDU_Smoke_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-eBay_DDU_Smoke_Test_Suite">
               </div> <!-- times-div-eBay_DDU_Smoke_Test_Suite -->
             </div> <!-- times-div -->
@@ -219,18 +301,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.eBayDDU.SmokeTest.Registration_Test</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.eBayDDU.SmokeTest.Ebay_SellerSignUp_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setup</span>
+                <span class="method-name">setup(org.testng.TestRunner@56102e1c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">Registration</span>
-                <span class="method-start">5355 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">eBaySellerSignUP</span>
+                <span class="method-start">4755 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">quitDriver</span>
-                <span class="method-start">8819 ms</span>
+                <span class="method-start">45153 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.eBayDDU.SmokeTest.Registration_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(org.testng.TestRunner@532721fd)</span>
+                <span class="method-start">45194 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Registration</span>
+                <span class="method-start">46813 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quitDriver</span>
+                <span class="method-start">86919 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.eBayDDU.SmokeTest.FirstTime_SignIn_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(org.testng.TestRunner@410954b)</span>
+                <span class="method-start">86936 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TestSignUp</span>
+                <span class="method-start">88347 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">quitDriver</span>
+                <span class="method-start">128397 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
